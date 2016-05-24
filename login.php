@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	if (isset($_SESSION["admin"])) {
+		header("Location:InicioGerente.php");
+	}
+	elseif (isset($_SESSION["us"])) {
+		header("Location:InicioVendedor.php");
+	}
+?>
 <!DOCTYPE>
 <html>
 <head>
