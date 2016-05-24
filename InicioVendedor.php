@@ -1,14 +1,10 @@
 <?php
 	session_start();
-	if (!isset($_SESSION["us"]))
-	{
-		header("Location:login.php");
-	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>...:::Bienvenido Gerente:::...</title>
+	<title>...:::Bienvenido Vendedor:::...</title>
 	<meta charset="utf-8">
 	<style type="text/css">
 			
@@ -46,8 +42,8 @@
 				width: 100%;
 				height: 20%;
 				background-color: gray;
+				font-size: 20px;
 				display:block;
-				font-size: 30px;
 
 			}
 			body
@@ -55,7 +51,6 @@
 				background-image: url("login.jpg");
 				background-repeat: no-repeat;
 				background-size: auto;
-				font-color:white;
 			}
 	
 			
@@ -65,18 +60,18 @@
 <body>
 		<div id="header">
 			<ul class="nav">
-				<li><a href="ClientesGerente.php">Gestionar Clientes.</a>
+				<li><a href="ClientesVendedor.php">Gestionar Clientes.</a>
 				</li>
-				<li><a href="VehiculosGerente.php">Gestionar Vehiculos.</a>
+				<li><a href="VehiculosVendedor.php">Gestionar Vehiculos.</a>
 				</li>
-				<li><a href="VentasGerente.php">Gestionar Ventas.</a></li>
-				<li><a href ="Acceso.php?cerrar=true">Cerrar Sesion</a></li>
+				<li><a href="VentasVendedor.php">Gestionar Ventas.</a></li>
+				<li><a href ='Acceso.php?cerrar=true'>Cerrar Sesion</a></li>
 			</ul>
 		</div>
 		
 		<div id="titulo" align="center">
 			<font color="white" face="algerian">
-			<?php print "Bienvenido Gerente ".  $_SESSION["us"]["nombre"]."."?>
+			<?php print "Bienvenido Vendedor ".  $_SESSION["us"]["nombre"]."."?>
 			</font>
 		</div>
 </body>
