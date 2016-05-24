@@ -1,5 +1,5 @@
 <?php 
-	include 'credencial.php';
+	include 'credenciales.php';
 class Conexion{
 
 	protected $conn;
