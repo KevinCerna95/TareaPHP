@@ -1,0 +1,33 @@
+create database tienda;
+use tienda;
+
+create table usuarios
+(idusuario integer primary key,
+ usuario varchar(50) not null,
+ contra varchar(50) not null,
+ nivel varchar(50)not null);
+
+create table cliente
+(idCliente integer primary key,
+ nombre varchar(80)not null,
+ dui varchar(9)not null,
+ nit varchar(14)not null,
+ direccion varchar(90)not null);
+
+create table vehiculo
+(idVehiculo integer primary key,
+marca varchar(50) not null,
+modelo varchar(50) not null,
+color varchar(50) not null,
+year integer not null,
+precio varchar(10) not null);
+
+create table ventas
+(idVenta integer primary key,
+ fecha varchar(50) not null,
+ idVehiculo integer not null,
+ idCliente integer not null,
+ total varchar(10));
+
+alter table ventas add foreign key(idVehiculo) references vehiculo(idVehiculo);
+alter table ventas add foreign key(idCliente) references cliente(idCliente);
